@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import iconBlack from "@/public/icon_black.png";
+import iconWhite from "@/public/icon_white.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,11 +41,12 @@ export default function Header() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-3 group">
               <Image
-                src={shouldShowScrolled ? "/icon_black.png" : "/icon_white.png"}
+                src={shouldShowScrolled ? iconBlack : iconWhite}
                 alt="제자들교회 로고"
                 width={50}
                 height={50}
                 className="transition-opacity duration-300"
+                placeholder="blur"
               />
               <div className={shouldShowScrolled ? "text-black" : "text-white"}>
                 <div className="text-2xl font-bold tracking-wide">제자들교회</div>

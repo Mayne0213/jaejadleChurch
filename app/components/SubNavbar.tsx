@@ -28,6 +28,7 @@ const SubNavbar: React.FC = () => {
             alt="Banner Image"
             fill
             style={{ objectFit: "cover" }}
+            className="animate-fadeIn"
           />
         )}
         

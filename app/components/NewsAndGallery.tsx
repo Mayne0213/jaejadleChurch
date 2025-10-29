@@ -1,5 +1,9 @@
 "use client";
 import Image from "next/image";
+import galleryImage1 from "@/public/photos/image.png";
+import galleryImage2 from "@/public/photos/image2.png";
+import galleryImage3 from "@/public/photos/image3.png";
+import galleryImage4 from "@/public/photos/image4.png";
 
 export default function NewsAndGallery() {
 
@@ -45,10 +49,10 @@ export default function NewsAndGallery() {
   
 
   const images = [
-    { id: 1, category: "worship", title: "주일 예배", date: "2025.01.15", src: "/photos/image.png" },
-    { id: 2, category: "event", title: "성탄절 행사", date: "2024.12.25", src: "/photos/image2.png" },
-    { id: 3, category: "mission", title: "해외 선교", date: "2024.11.10", src: "/photos/image3.png" },
-    { id: 4, category: "worship", title: "수요 예배", date: "2025.01.10", src: "/photos/image4.png" }
+    { id: 1, category: "worship", title: "주일 예배", date: "2025.01.15", src: galleryImage1 },
+    { id: 2, category: "event", title: "성탄절 행사", date: "2024.12.25", src: galleryImage2 },
+    { id: 3, category: "mission", title: "해외 선교", date: "2024.11.10", src: galleryImage3 },
+    { id: 4, category: "worship", title: "수요 예배", date: "2025.01.10", src: galleryImage4 }
   ];
 
   
@@ -138,6 +142,7 @@ export default function NewsAndGallery() {
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 50vw, 25vw"
+                      placeholder="blur"
                     />
                   </div>
 

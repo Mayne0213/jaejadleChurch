@@ -2,6 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import heroImage1 from "@/public/image.png";
+import heroImage2 from "@/public/image2.png";
+import heroImage3 from "@/public/home/pray.png";
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -11,19 +14,19 @@ export default function Hero() {
       title: "예수님의 사랑으로",
       subtitle: "하나되는 제자들교회",
       description: "제자들교회 홈페이지에 방문하신 여러분을 환영합니다",
-      image: "/image.png"
+      image: heroImage1
     },
     {
       title: "말씀과 기도로",
       subtitle: "성장하는 교회",
       description: "주님의 말씀을 배우고 실천하며 함께 성장하는 공동체입니다",
-      image: "/image2.png"
+      image: heroImage2
     },
     {
       title: "이웃을 섬기는",
       subtitle: "사랑의 공동체",
       description: "예수님의 사랑을 실천하며 이웃과 세상을 섬기는 교회입니다",
-      image: "/home/pray.png"
+      image: heroImage3
     }
   ];
 
@@ -47,7 +50,6 @@ export default function Hero() {
           fill
           priority
           placeholder="blur"
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
           className={`object-cover transition-opacity duration-1000 ${
             currentSlide === index ? 'opacity-100' : 'opacity-0'
           }`}

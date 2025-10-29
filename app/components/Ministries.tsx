@@ -1,4 +1,5 @@
 import Image from "next/image";
+import bgImage from "@/public/image.png";
 
 export default function Ministries() {
   
@@ -15,11 +16,10 @@ export default function Ministries() {
     >
       {/* 배경 이미지 */}
       <Image
-        src="/image.png"
+        src={bgImage}
         alt="Ministries background"
         fill
         placeholder="blur"
-        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
         className="object-cover"
       />
       {/* 검은색 오버레이 (가독성 향상 위해 약간 더 진하게) */}

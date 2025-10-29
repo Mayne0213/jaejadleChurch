@@ -1,21 +1,24 @@
 import Image from "next/image";
+import introImage1 from "@/public/home/church1.jpg";
+import introImage2 from "@/public/home/church2.png";
+import introImage3 from "@/public/home/pray.png";
 
 export default function Intro() {
   const items = [
     {
-      image: "/home/church1.jpg",
+      image: introImage1,
       title: "주일 설교",
       subtitle: "Sunday Sermon",
       description: "제자들교회는 예수님의 사랑으로 하나되는 공동체입니다. 서로를 소중히 여기며 함께 성장하는 교회입니다."
     },
     {
-      image: "/home/church2.png",
+      image: introImage2,
       title: "주일 찬양",
       subtitle: "Sunday Worship",
       description: "성경 말씀을 통해 하나님을 알아가고, 실천하며 살아가는 건강한 교회 공동체로 함께합니다."
     },
     {
-      image: "/home/pray.png",
+      image: introImage3,
       title: "금요 성령집회",
       subtitle: "Friday Spirit Meeting",
       description: "예수님의 사랑을 실천하며 이웃과 지역사회를 섬기며 나아가는 교회입니다."
@@ -50,7 +53,6 @@ export default function Intro() {
                 alt={item.title}
                 fill
                 placeholder="blur"
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
               {/* 검은색 오버레이 */}
