@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../node_modules/.prisma/client"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int      @id @default(autoincrement())
+  userId       String   @unique
+  userPassword String
+  userName     String
+  userPhone    String   @unique
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  announcements Announcement[]
+
+  @@map("users")
+}
+
+model Announcement {
+  id          Int      @id @default(autoincrement())
+  title       String   @default("")
+  content     String   @default("")
+  isImportant Boolean  @default(false)
+  viewCount   Int      @default(0)
+  authorId    Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  author User @relation(fields: [authorId], references: [id], onDelete: Cascade)
+
+  @@index([authorId])
+  @@map("announcements")
+}

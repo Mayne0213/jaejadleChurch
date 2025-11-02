@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import SubNavbar from "@/app/components/SubNavbar";
+import SubNavbar from "@/components/widgets/SubNavbar";
 
 export default function SubPagesLayout({
   children,
@@ -9,7 +9,7 @@ export default function SubPagesLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="">
+    <div>
       <SubNavbar />
       <div className="flex items-center justify-center">
         <div className="w-full max-w-[1400px] flex items-center justify-center m-[30px]">

@@ -1,12 +1,9 @@
 import React from "react";
-import BackgroundDot from "@/app/components/BackgroundDot";
-import LoginForm from "@/app/components/auth/LoginForm";
+import LoginForm from "@/components/auth/LoginForm";
 
 export default function LoginPage() {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6 relative">
-      <BackgroundDot />
-
       <div className="w-full max-w-md relative z-10">
         {/* Header Section */}
         <div className="text-center mb-8">

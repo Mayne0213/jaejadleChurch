@@ -1,12 +1,9 @@
 import React from "react";
-import BackgroundDot from "@/app/components/BackgroundDot";
-import SignUpForm from "@/app/components/auth/SignUpForm";
+import SignUpForm from "@/components/auth/SignUpForm";
 
 export default function SignUpPage() {
   return (
-    <div className="min-h-screen bg-gray-50 mt-[100px] flex items-center justify-center p-6 relative">
-      <BackgroundDot />
-
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6 relative">
       <div className="w-full max-w-md relative z-10 py-12">
         {/* Header Section */}
         <div className="text-center mb-8">

@@ -1,17 +1,17 @@
-import Hero from "@/app/components/Hero";
-import Intro from "@/app/components/Intro";
-import ServiceTimes from "@/app/components/ServiceTimes";
-import NewsAndGallery from "@/app/components/NewsAndGallery";
-import Ministries from "@/app/components/Ministries";
-import FAQ from "@/app/components/FAQ";
-import Contact from "@/app/components/Contact";
+import Hero from "@/components/landing/Hero";
+import Intro from "@/components/landing/Intro";
+import NewsAndGallery from "@/components/landing/NewsAndGallery";
+import Ministries from "@/components/landing/Ministries";
+import FAQ from "@/components/landing/FAQ";
+import Contact from "@/components/landing/Contact";
+import Welcome from "@/components/landing/Welcome";
 
 export default function JaejadlePage() {
   return (
     <div>
       <Hero />
-      <ServiceTimes />
       <Intro />
+      <Welcome />
       <NewsAndGallery /> {/* csr */}
       <FAQ />
       <Ministries />
@@ -19,4 +19,3 @@ export default function JaejadlePage() {
     </div>
   );
 }
-
